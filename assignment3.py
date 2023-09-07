@@ -22,3 +22,20 @@ rate: 5%
 10 years
 final balance: 1320.68
 """
+
+
+a = float(input("Annual Investment: \n"))
+r = int(input("Interest rate (as a percentage): \n"))
+r = (r/100) + 1
+t = int(input("Length of Time (in years): \n"))
+
+f = a
+end = 1
+
+while t>=end:
+    a = f + (a*r)
+    end = end+1
+    
+a = round(a-f,2)
+
+print("The amount of interest is", a)
