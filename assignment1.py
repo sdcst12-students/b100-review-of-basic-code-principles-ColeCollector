@@ -14,21 +14,21 @@ Your program should ask the user for
 * Appropriate formatting of the output is a requirement for this assignment
 """
 
-p = float(input("Initial Investment: \n"))
-r = int(input("Interest rate (as a pecentage): \n"))
-r = r/100
+principal = float(input("Initial Investment: \n"))
+rate = int(input("Interest rate (as a pecentage): \n"))
+rate = rate/100
 ask = input("Would you like to enter the length of time as years, months or days?\n")
 
 if ask == "years":
-  t = float(input("Length of Time (in years): \n"))
+  time = float(input("Length of Time (in years): \n"))
 
 elif ask == "months":
-  t = float(input("Length of Time (in months): \n"))
-  t = t/12
+  time = float(input("Length of Time (in months): \n"))
+  time = time/12
 
 elif ask == "days":
-  t = float(input("Length of Time (in days): \n"))
-  t = t/365
+  time = float(input("Length of Time (in days): \n"))
+  time = time/365
   
-i = p*r*t
-print("The amount of interest is", i)
+interest = principal*rate*time
+print("The amount of interest is", interest)

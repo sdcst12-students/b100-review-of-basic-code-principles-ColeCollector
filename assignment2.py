@@ -24,17 +24,17 @@ final balance: 1320.68
 """
 
 
-a = float(input("Annual Investment: \n"))
-r = int(input("Interest rate (as a percentage): \n"))
-r = (r/100) + 1
-t = int(input("Length of Time (in years): \n"))
+ainv = float(input("Annual Investment: \n"))
+rate = int(input("Interest rate (as a percentage): \n"))
+rate = (rate/100) + 1
+time = int(input("Length of Time (in years): \n"))
 
-f = a
+fixed = ainv
+interest = ainv
 
-
-for i in range(t):
-    a = f + (a*r)
+for i in range(time):
+    interest = fixed + (interest*rate)
     
-a = round(a-f,2)
+interest = round(interest-fixed,2)
 
-print("The amount of interest is", a)
+print("The amount of interest is", interest)

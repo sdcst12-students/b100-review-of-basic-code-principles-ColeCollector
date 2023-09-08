@@ -22,24 +22,19 @@ How many months will it take him to pay off the car.  How much interest has he p
 He will have paid 21711.60 in interest
 """
 import time
-debt = float(input("Initial Debt:\n"))
+initialdebt = float(input("Initial Debt:\n"))
+debt = initialdebt
 rate = float(input("Annual Interest rate:\n"))
-rate = (rate/100)/12
-rate += 1
+rate = (rate/1200)+ 1
 payment = float(input("Annual Payment:\n"))
 
-
-f = payment
 interest = 0
 months = 0
 
-while debt >= payment:
-    debt = debt*rate
-    payment += f
-    print(debt,payment)
+while debt >= 0:
+    debt = debt*rate -(payment/12)
     months += 1
     
 
-
-payment = round(payment-f,2)
-print("It took", months, " months to pay", payment)
+payment = round(payment,2)
+print("It took", months, "months to pay", round(((months*(payment/12))-initialdebt+debt),2), "in interest")
